@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>3D Image</title>
+	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+	<!-- div .wrapp -->
+	<div class="wrapp">
+
+		<div class="content">
+
+			<h1 class="title">3D <span>image</span></h1>
+
+			<div class="card">
+				<div class="card__item">
+					<model-viewer class="card__model" loading="eager" style="background-color: rgb(212,212,212);"
+						shadow-intensity="1" src="obj/obj1/scene.gltf" alt="3d img1" autoplay auto-rotate
+						camera-controls ar ios-src="obj/obj1/scene.gltf"></model-viewer>
+					<span class="card__txt">
+						rotate <span>me</span>
+					</span>
+				</div>
+				<div class="card__item">
+					<model-viewer class="card__model" loading="eager" style="background-color: rgb(18,18,18);"
+						shadow-intensity="1" src="obj/obj2/viking_room.glb" alt="3d img2" camera-orbit="45deg 55deg"
+						autoplay auto-rotate camera-controls ar ios-src="obj/obj1/scene.gltf"></model-viewer>
+					<span class="card__txt">
+						rotate <span>me</span>
+					</span>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /div .wrapp END -->
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</body>
+
+</html>

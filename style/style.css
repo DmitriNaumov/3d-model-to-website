@@ -1,0 +1,91 @@
+/* 1.1.general-setting-pages *************************/
+/****************************************************/
+:root {
+	--pr-color: #fff;
+	--second-color: #0a0a0a;
+	--cubicbz: cubic-bezier(.9, 0, .1, 1);
+	--fz-big: 60px;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Syne', sans-serif;
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+body {
+	background: var(--second-color);
+}
+
+/******************************************/
+.wrapp {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	padding: 0 50px;
+	z-index: 1;
+}
+
+.content {
+	width: 100%;
+}
+
+.title {
+	margin-top: 0;
+	margin-bottom: 50px;
+	font-size: var(--fz-big);
+	text-transform: uppercase;
+	color: var(--pr-color);
+}
+
+/* 3D Image **********************************/
+.card {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 500px;
+}
+
+.card__item {
+	position: relative;
+	width: calc(50% - 40px);
+	height: 100%;
+}
+
+.card__model {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.card__txt {
+	position: absolute;
+	display: block;
+	bottom: 10%;
+	left: 40px;
+	font-size: 40px;
+	text-transform: uppercase;
+	color: var(--pr-color);
+	mix-blend-mode: difference;
+	pointer-events: none;
+	z-index: 3;
+	transition: .8s var(--cubicbz);
+}
+
+.card__item:hover .card__txt {
+	transform: translateY(-15px);
+}
+
+.title span,
+.card__txt span {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--pr-color);
+}
